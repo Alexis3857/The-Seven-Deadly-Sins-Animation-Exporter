@@ -4,7 +4,7 @@ namespace _7dsgcAnimExporter
 {
     public static class Exporter
     {
-        private const string BodyModelNamePattern = "hero_{0}_body_{1}";  // Bodies bundles names always have this pattern. {0} = character name, {1} = body number
+        private const string BodyModelNamePattern = "hero_{0}_body_{1}";  // Bodies game object names always have this pattern. {0} = character name, {1} = body number
 
         private const string HeadModelNamePattern = "hero_{0}_head_{1}";  // Heads game object names always have this pattern. {0} = character name, {1} = head number
 
@@ -54,7 +54,7 @@ namespace _7dsgcAnimExporter
         }
 
         // Finds the animator referenced in gameObject inside file
-        static Animator? FindAnimator(SerializedFile file, GameObject gameObject)
+        private static Animator? FindAnimator(SerializedFile file, GameObject gameObject)
         {
             foreach (var component in gameObject.m_Components)
             {
